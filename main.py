@@ -29,7 +29,7 @@ def tweet(api: tweepy.API, message: str, image_path=None):
     return 0
 
 
-# verify api authentication and tweet out object every 10 minutes
+# verify api authentication and tweet out object every 20 minutes
 if __name__ == "__main__":
     api = get_api()
     try:
@@ -40,4 +40,4 @@ if __name__ == "__main__":
     while True:
         tweet(api, helper.generate_object() +
               ' ' + wcma_hashtag + ' ' + wcma_url)
-        time.sleep(600)
+        time.sleep(1200)
