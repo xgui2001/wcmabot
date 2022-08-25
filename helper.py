@@ -11,11 +11,11 @@ def get_collection():
     return collection_df
 
 
-# generate a random object from the WCMA dataframe
+# generate a tweet that describes an object from the WCMA dataframe
 def generate_object():
     random_int = random.randint(0, len(get_collection()))
     random_object = get_collection().iloc[random_int]
-    # one object has title, maker, creation date, medium and departmet
+    # one tweet has title, maker, creation date, medium and department
     object_string = str(random_object[1]) + ', ' + str(random_object[2]) + ', ' + str(random_object[7]) + \
         ', ' + str(random_object[12]) + ', ' + str(random_object[4])
     print(object_string)
